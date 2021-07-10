@@ -2,7 +2,8 @@
 
 # Functions
 function f_displayHelp() {
-    echo "Unknown command. Provide an argument along with additional flags to continue.";
+    echo "Usage: $0 -flag(s) command";
+    echo "i.e; $0 -vd serve    Would display the version before starting the server"
     echo ""
     echo "Optional flags:";
     echo "-d | --dev | --developer      Development environment"
@@ -13,6 +14,8 @@ function f_displayHelp() {
     echo "Commands:"
     echo "serve       Start the server normally"
     echo "start       Same as serve"
+    echo ""
+    echo "Press CTRL+C to stop the server"
     echo ""
 }
 function f_startServer() {
